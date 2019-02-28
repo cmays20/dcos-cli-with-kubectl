@@ -18,7 +18,7 @@ Creates a proxy on the users machine. A token for authentication gets outputted 
 ```
 docker run -e APPNAME=training -e CLUSTER=<Assigned Cluster> -e PUBLICIP=<Public EC2 IP> \
   -e DCOS_URL=<DC/OS URL> -e DCOS_USER=<username> -e DCOS_PASSWORD=<password> \
-  -it cmays/dcos-cli-with-kubectl-helm:latest proxy
+  -it -p 8001:8001 cmays/dcos-cli-with-kubectl-helm:latest proxy
 ```
 Connect to the proxy with the following command and use the token to login:
 ```
