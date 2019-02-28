@@ -57,7 +57,7 @@ function dcos_connect_install_clis {
 
 function kubectl_setup {
   dcos kubernetes cluster kubeconfig --context-name=${APPNAME}-prod-k8s-cluster${CLUSTER} --cluster-name=${APPNAME}/prod/k8s/cluster${CLUSTER} \
-    --apiserver-url https://${APPNAME}.prod.k8s.cluster${CLUSTER}.mesos.lab:8443 \
+    --apiserver-url https://${APPNAME}.prod.k8s.cluster${CLUSTER}.mesos.lab:443 \
     --insecure-skip-tls-verify
 }
 
